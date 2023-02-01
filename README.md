@@ -1,13 +1,15 @@
-# Sample Hardhat Project
+# MetaCrafters Crowd Funding Project
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+Crowdfunding campaign where users can pledge funds to and claim funds from the contract
 
-Try running some of the following tasks:
+1. Funds take the form of a custom ERC20 token
+2. It has a funding goal
+3. When a funding goal is not met, customers are be able to get a refund of their pledged funds
+4. dApps using the contract can observe state changes in transaction logs
+5. Contract is upgradeable
 
 ```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
+npx hardhat compile
 npx hardhat node
-npx hardhat run scripts/deploy.js
+npx hardhat run scripts/deployAsProxy.js
 ```
