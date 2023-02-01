@@ -68,7 +68,7 @@ contract CrowdFunding {
 
     function withdrawToken(address tk, address to, uint256 amount) external onlyOwner {
         if (tk == token)
-            require(funding >= fundingGoal);
+            require(funding >= fundingGoal, "funding goal not reached");
         emit Withdraw(tk, to, amount);
         require(IERC20(tk).transfer(to, amount), "withdraw token failed");
     }
